@@ -1,9 +1,9 @@
 import streamlit as st
 import pandas as pd
-import joblib
+#import joblib
 
 # Load the pre-trained Random Forest model
-model = joblib.load('your_random_forest_model.pkl')
+#model = joblib.load('your_random_forest_model.pkl')
 
 # Custom CSS for styling
 st.markdown(
@@ -41,12 +41,12 @@ if st.button('Predict'):
         'petal_width': [petal_width]
     })
 
-    prediction = model.predict(input_data)
-    prediction_prob = model.predict_proba(input_data)
+    #prediction = model.predict(input_data)
+    #prediction_prob = model.predict_proba(input_data)
 
     st.markdown('### Prediction Results:')
-    species_map = {0: 'Setosa', 1: 'Versicolor', 2: 'Virginica'}
-    st.markdown(f'**Predicted Species:** {species_map[prediction[0]]}')
+    fraud_map = {0: 'Setosa', 1: 'Versicolor', 2: 'Virginica'}
+    st.markdown(f'**Predicted Fraud:**')
     st.markdown(f'**Class Probabilities:**')
-    st.write(pd.DataFrame({'Species': species_map.values(), 'Probability': prediction_prob[0]}))
+    #st.write(pd.DataFrame({'Fraud or Not': ))
 
