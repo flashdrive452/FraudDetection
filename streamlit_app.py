@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-#import joblib
+import joblib
 
 # Load the pre-trained Random Forest model
 #model = joblib.load('your_random_forest_model.pkl')
@@ -28,8 +28,8 @@ st.title('Credit Card Fraud Detection')
 st.markdown('### This model predicts whether a credit card transaction is fraudulent or not')
 
 # Input form with improved styling
-cc_num = st.number_input('Enter Credit card Number', min_value=0.0, max_value=10.0, format='%f', key='cc_num')
-amt = st.number_input('Enter Enter transaction amount', min_value=0.0, max_value=10.0, format='%f', key='amt')
+cc_num = st.number_input('Enter Credit card Number', min_value=0.0, max_value=9999999999999999990.0, format='%f', key='cc_num')
+amt = st.number_input('Enter Enter transaction amount', min_value=0.0, max_value=100000000.0, format='%f', key='amt')
 street = st.number_input('Enter Enter Street', min_value=0.0, max_value=10.0, format='%f', key='street')
 city = st.number_input('Enter Enter City', min_value=0.0, max_value=10.0, format='%f', key='city')
 
