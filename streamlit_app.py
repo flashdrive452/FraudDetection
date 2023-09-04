@@ -28,17 +28,17 @@ st.title('Credit Card Fraud Detection')
 st.markdown('### This model predicts whether a credit card transaction is fraudulent or not')
 
 # Input form with improved styling
-sepal_length = st.number_input('Enter Credit card Number', min_value=0.0, max_value=10.0, format='%f', key='sepal_length')
-sepal_width = st.number_input('Enter Enter transaction amount', min_value=0.0, max_value=10.0, format='%f', key='sepal_width')
-petal_length = st.number_input('Enter Enter Street', min_value=0.0, max_value=10.0, format='%f', key='petal_length')
-petal_width = st.number_input('Enter Enter City', min_value=0.0, max_value=10.0, format='%f', key='petal_width')
+cc_num = st.number_input('Enter Credit card Number', min_value=0.0, max_value=10.0, format='%f', key='cc_num')
+amt = st.number_input('Enter Enter transaction amount', min_value=0.0, max_value=10.0, format='%f', key='amt')
+street = st.number_input('Enter Enter Street', min_value=0.0, max_value=10.0, format='%f', key='street')
+city = st.number_input('Enter Enter City', min_value=0.0, max_value=10.0, format='%f', key='city')
 
 if st.button('Predict'):
     input_data = pd.DataFrame({
-        'Enter Credit card Number': [sepal_length],
-        'Enter Enter transaction amount': [sepal_width],
-        'Enter Enter Street': [petal_length],
-        'Enter Enter City': [petal_width]
+        'Enter Credit card Number': [cc_num],
+        'Enter Enter transaction amount': [amt],
+        'Enter Enter Street': [street],
+        'Enter Enter City': [city]
     })
 
     #prediction = model.predict(input_data)
