@@ -25,7 +25,7 @@ st.markdown(
 
 # Create a Streamlit UI
 st.title('Random Forest Classifier')
-st.markdown('## Predict Iris Flower Species')
+st.markdown('## Predict Fraud or Not')
 
 # Input form with improved styling
 sepal_length = st.number_input('Enter Sepal Length', min_value=0.0, max_value=10.0, format='%f', key='sepal_length')
