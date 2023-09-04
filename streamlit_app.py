@@ -25,7 +25,7 @@ st.markdown(
 
 # Create a Streamlit UI
 st.title('Credit Card Fraud Detection')
-st.markdown('## This model predicts whether a credit card transaction is fraudulent or not')
+st.markdown('### This model predicts whether a credit card transaction is fraudulent or not')
 
 # Input form with improved styling
 sepal_length = st.number_input('Enter Credit card Number', min_value=0.0, max_value=10.0, format='%f', key='sepal_length')
