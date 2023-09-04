@@ -35,10 +35,10 @@ petal_width = st.number_input('Enter Enter City', min_value=0.0, max_value=10.0,
 
 if st.button('Predict'):
     input_data = pd.DataFrame({
-        'sepal_length': [sepal_length],
-        'sepal_width': [sepal_width],
-        'petal_length': [petal_length],
-        'petal_width': [petal_width]
+        'Enter Credit card Number': [sepal_length],
+        'Enter Enter transaction amount': [sepal_width],
+        'Enter Enter Street': [petal_length],
+        'Enter Enter City': [petal_width]
     })
 
     #prediction = model.predict(input_data)
